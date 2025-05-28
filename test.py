@@ -24,6 +24,6 @@ def recover_image(image_path):
     output = np.clip(output * 255, 0, 255).astype(np.uint8)
     return output
 
-for img_name in os.listdir('data/compressed'):
-    output = recover_image(f'data/compressed/{img_name}')
-    cv2.imwrite(f'data/recovered/{img_name}', output)
+for img_name in os.listdir('test_data/compressed'):
+    output = recover_image(f'test_data/compressed/{img_name}')
+    cv2.imwrite(f'test_data/recovered/{img_name}', output)
